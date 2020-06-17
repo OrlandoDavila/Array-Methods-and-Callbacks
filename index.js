@@ -31,14 +31,13 @@ fifaData.filter((game) => game['Year'] === 2014 && game['Stage'] === 'Final').ma
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of 
 objects with only finals data */
 
-// const arrObs = [];
-//function getFinals(data) {                //use filter for this answer
 
-    /* code here */
-    // fifaData.forEach(function(item){
-    //     return arrObs.push(item);
-    // });
-//};
+function getFinals(data) {                //use filter for this answer
+return data.filter(game => game['Stage'] = 'Final');
+};
+
+console.log(getFinals(fifaData));
+
 
 /* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`,
  and returns an array called `years` containing all of the years in the dataset */
@@ -88,11 +87,17 @@ number of home team goals and away team goals scored per match (Hint: use .reduc
 
 function getAverageGoals(/* code here */) {
 
-    /* code here */
+    
 
 };
 
 getAverageGoals();
+
+// function getAverageGoals(data) {
+//     const homeTeam = Math.round(data.reduce((total, num) => num["Home Team Goals"] + total, 0) / data.length);
+//     const awayTeam = Math.round(data.reduce((total, num) => num["Away Team Goals"] + total, 0) / data.length);
+//     return { "Home Team Average": homeTeam, "Away Team Average": awayTeam };
+// };
 
 /// STRETCH 🥅 //
 
